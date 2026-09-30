@@ -13,7 +13,7 @@ public class CameraCtrl : InstanceBase<CameraCtrl>
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Transform center,target;
-    
+    public float moveSpeed,radius,maxAngle;
     bool isLerping;
     public List<GameObject> flagPointLt;
     void Start()
@@ -46,7 +46,28 @@ public class CameraCtrl : InstanceBase<CameraCtrl>
         }
 
     }
-    
+    void GetMouseInput()
+    {
+        if(Input.GetMouseButton(1))
+        {
+            float angle=Vector3.Angle(transform.position-center.position,Vector3.up),x=Input.GetAxisRaw("Mouse X"),y=Input.GetAxisRaw("Mouse Y");
+
+
+            Vector3 temp=transform.position-center.position,temp1=temp,axis=Vector3.Cross(temp,Vector3.up).normalized;
+            
+            temp.y=0;
+            temp1.x=0;
+            temp1.z=0;
+
+            transform.position=Quaternion.Euler(0,x*moveSpeed*Time.deltaTime,0)*temp+temp1+center.position;
+            if(!(90-angle>maxAngle && y<0 || 90-angle<-maxAngle && y>0))
+                transform.position=Quaternion.AngleAxis(-y*moveSpeed*Time.deltaTime,axis)*(transform.position-center.position)+center.position;
+
+            transform.LookAt(center);
+        }
+
+        
+    }
     // Update is called once per frame
     void Update()
     {
@@ -66,5 +87,6 @@ public class CameraCtrl : InstanceBase<CameraCtrl>
         {
             Transform(flagPointLt[(int)Direction.back]);
         }
+        GetMouseInput();
     }
 }
