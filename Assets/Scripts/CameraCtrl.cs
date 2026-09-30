@@ -13,7 +13,7 @@ public class CameraCtrl : InstanceBase<CameraCtrl>
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Transform center,target;
-    public float moveSpeed,radius,maxAngle;
+    public float moveSpeed,scaleSpeed,radius,maxAngle;
     bool isLerping;
     public List<GameObject> flagPointLt;
     void Start()
@@ -65,7 +65,8 @@ public class CameraCtrl : InstanceBase<CameraCtrl>
 
             transform.LookAt(center);
         }
-
+        print(Input.GetAxis("Mouse ScrollWheel"));
+        transform.position+=-(transform.position-center.position).normalized*Input.GetAxis("Mouse ScrollWheel")*scaleSpeed*Time.deltaTime;
         
     }
     // Update is called once per frame
