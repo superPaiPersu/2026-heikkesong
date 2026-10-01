@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CubeItem : MonoBehaviour
@@ -15,6 +16,15 @@ public class CubeItem : MonoBehaviour
         
         DestroyImmediate(gameObject);
         ;
+    }
+    public void ChangeMaterial()
+    {
+        
+        List<Material> mtlt= new List<Material>(PaintCtrl.instance.nowChoose.materialLt)
+        {
+            PaintCtrl.instance.outlineMt
+        };
+        mr.SetMaterials(mtlt);
     }
     public void Create()
     {

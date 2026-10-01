@@ -13,9 +13,10 @@ public class CubeManager : InstanceBase<CubeManager>
     {
         Application.targetFrameRate=60;
         BoxCollider collider=smallCubePrefab.GetComponent<BoxCollider>();
-        lengthX=collider.size.x;
-        lengthY=collider.size.y;
-        lengthZ=collider.size.z;
+        lengthX=collider.size.x*smallCubePrefab.transform.localScale.x;
+        
+        lengthY=collider.size.y*smallCubePrefab.transform.localScale.y;
+        lengthZ=collider.size.z*smallCubePrefab.transform.localScale.z;
     }
     public void InitCubes()//y是竖轴
     {

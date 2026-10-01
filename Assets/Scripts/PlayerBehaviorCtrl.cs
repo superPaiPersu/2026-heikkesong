@@ -17,7 +17,7 @@ public class PlayerBehaviorCtrl : InstanceBase<PlayerBehaviorCtrl>
     }
     void GetInput()
     {
-        if(Input.GetMouseButtonDown(0) ||Input.GetMouseButton(0) && inCarve )
+        if(Input.GetMouseButtonDown(0) ||Input.GetMouseButton(0) && (inCarve||nowMode==GameMode.paint ))
         { 
             Ray r=CameraCtrl.instance.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -31,17 +31,16 @@ public class PlayerBehaviorCtrl : InstanceBase<PlayerBehaviorCtrl>
                 {
                     inCarve=true;
                     item.isChosen=true;
-                    print(item);
                     deleteIntentCubeLt.Add(item);
-                    
                 }
                 if(nowMode==GameMode.add)
                 {
+                    CubeManager.instance.AddCube(hit.normal,item);
+                }
+                if(nowMode==GameMode.paint)
+                {
                     
-                    if (Physics.Raycast(r,out hit,100,1<<LayerMask.NameToLayer("cube")))
-                    {
-                        CubeManager.instance.AddCube(hit.normal,item);
-                    }
+                    item.ChangeMaterial();
                 }
             }
             
@@ -54,7 +53,7 @@ public class PlayerBehaviorCtrl : InstanceBase<PlayerBehaviorCtrl>
                 inCarve=false;
                 foreach(var i in deleteIntentCubeLt)
                 {
-                    print("摧毁");
+                    
                     i.Delete();
                 }
                 deleteIntentCubeLt.Clear();
@@ -68,7 +67,7 @@ public class PlayerBehaviorCtrl : InstanceBase<PlayerBehaviorCtrl>
                 inCarve=false;
                 foreach(var i in deleteIntentCubeLt)
                 {
-                    print("No");
+                   
                     i.isChosen=false;
                 }
                 deleteIntentCubeLt.Clear();
