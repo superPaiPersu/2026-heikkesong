@@ -3,7 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 public enum GameMode
 {
-    carve,paint,add
+    none,carve,paint,add
 }
 public class PlayerBehaviorCtrl : InstanceBase<PlayerBehaviorCtrl>
 {
@@ -11,6 +11,7 @@ public class PlayerBehaviorCtrl : InstanceBase<PlayerBehaviorCtrl>
     public GameMode nowMode;
     bool inCarve;
     List<CubeItem> deleteIntentCubeLt= new List<CubeItem>();
+    public Texture2D cursorDefault,cursorCarve,cursorPaint,cursorAdd;
     void Start()
     {
         
@@ -41,6 +42,7 @@ public class PlayerBehaviorCtrl : InstanceBase<PlayerBehaviorCtrl>
                 {
                     
                     item.ChangeMaterial();
+                    item.ChangeColor();
                 }
             }
             
@@ -72,12 +74,35 @@ public class PlayerBehaviorCtrl : InstanceBase<PlayerBehaviorCtrl>
                 }
                 deleteIntentCubeLt.Clear();
             }
-            
+            else
+            {
+                nowMode=GameMode.none;
+            }
+        }
+    }
+    void UpdateCursor()
+    {
+        if(nowMode==GameMode.add)
+        {
+            Cursor.SetCursor(cursorAdd, Vector2.zero, CursorMode.Auto);
+        }
+        if(nowMode==GameMode.carve)
+        {
+            Cursor.SetCursor(cursorCarve, Vector2.zero, CursorMode.Auto);
+        }
+        if(nowMode==GameMode.paint)
+        {
+            Cursor.SetCursor(cursorPaint, Vector2.zero, CursorMode.Auto);
+        }
+        if(nowMode==GameMode.none)
+        {
+            Cursor.SetCursor(cursorDefault,Vector2.zero,CursorMode.Auto);
         }
     }
     // Update is called once per frame
     void Update()
     {
         GetInput();
+        UpdateCursor();
     }
 }

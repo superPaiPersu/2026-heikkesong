@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: box 2
-  m_Shader: {fileID: 4800000, guid: 546749840c7cf6d41a79f0c728225a9e, type: 3}
+  m_Name: 发光蓝
+  m_Shader: {fileID: 4800000, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -127,7 +127,7 @@ Material:
     - _RimIntensity: 1.5
     - _RimPower: 2
     - _RimSharpness: 0.7
-    - _Smoothness: 0.5
+    - _Smoothness: 0.2
     - _SmoothnessTextureChannel: 0
     - _SpecIntensity: 0.6
     - _SpecularHighlights: 1
@@ -141,8 +141,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0.09999997, g: 0.049999982, b: 0.11999995, a: 1}
     - _RimColor: {r: 1, g: 0.9, b: 0.95, a: 1}

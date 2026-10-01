@@ -26,6 +26,10 @@ public class CubeItem : MonoBehaviour
         };
         mr.SetMaterials(mtlt);
     }
+    public void ChangeColor()
+    {
+        mr.material.color=CubeColorCtrl.instance.nowChosenColor;
+    }
     public void Create()
     {
         ;

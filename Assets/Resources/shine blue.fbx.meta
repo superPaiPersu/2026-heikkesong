@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 发光蓝
-    second: {fileID: 2100000, guid: ec0235f5b5384a346a63f2634d7d2e69, type: 2}
+    second: {fileID: 2100000, guid: b1f8c10767ece544dac39356f24364e6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 发光蓝.001
-    second: {fileID: 2100000, guid: ec0235f5b5384a346a63f2634d7d2e69, type: 2}
+    second: {fileID: 2100000, guid: 8a412008f3b63b14699ca4bebb334bf6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
