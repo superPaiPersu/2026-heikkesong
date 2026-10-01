@@ -65,7 +65,7 @@ public class CameraCtrl : InstanceBase<CameraCtrl>
 
             transform.LookAt(center);
         }
-        print(Input.GetAxis("Mouse ScrollWheel"));
+        // print(Input.GetAxis("Mouse ScrollWheel"));
         transform.position+=-(transform.position-center.position).normalized*Input.GetAxis("Mouse ScrollWheel")*scaleSpeed*Time.deltaTime;
         
     }

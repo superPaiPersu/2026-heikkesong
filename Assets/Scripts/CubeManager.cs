@@ -8,16 +8,18 @@ public class CubeManager : InstanceBase<CubeManager>
     public GameObject smallCubePrefab,cubesParent;
     public Vector3 centerPos,cubeCnt;
     List<CubeItem> allCubes=new List<CubeItem>();
+    float lengthX,lengthY,lengthZ;
     void Start()
     {
         Application.targetFrameRate=60;
+        BoxCollider collider=smallCubePrefab.GetComponent<BoxCollider>();
+        lengthX=collider.size.x;
+        lengthY=collider.size.y;
+        lengthZ=collider.size.z;
     }
     public void InitCubes()//y是竖轴
     {
-        BoxCollider collider=smallCubePrefab.GetComponent<BoxCollider>();
-        float lengthX=collider.size.x;
-        float lengthY=collider.size.y;
-        float lengthZ=collider.size.z;
+        
         float nowX=0,nowY=0,nowZ=0;
         cubesParent.transform.position=centerPos;
         for(int i=1;i<=cubeCnt.x;i++)
@@ -44,6 +46,23 @@ public class CubeManager : InstanceBase<CubeManager>
             nowX+=lengthX;
         }
         
+    }
+    public void AddCube(Vector3 normal,CubeItem item)
+    {
+        CubeItem newItem=Instantiate(smallCubePrefab,cubesParent.transform).GetComponent<CubeItem>();
+        allCubes.Add(newItem);
+        if(Vector3.Cross(item.transform.forward,normal).sqrMagnitude<1e-6f)
+        {
+            newItem.transform.position=item.transform.position+normal.normalized*lengthZ;
+        }
+        if(Vector3.Cross(item.transform.up,normal).sqrMagnitude<1e-6f)
+        {
+            newItem.transform.position=item.transform.position+normal.normalized*lengthY;
+        }
+        if(Vector3.Cross(item.transform.right,normal).sqrMagnitude<1e-6f)
+        {
+            newItem.transform.position=item.transform.position+normal.normalized*lengthX;
+        }
     }
     // Update is called once per frame
     void Update()

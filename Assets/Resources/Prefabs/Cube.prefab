@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 680189814038338209}
   - component: {fileID: 2478522848717809286}
   - component: {fileID: 2366147905568269650}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,3 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e85d2027600cc4fac3a177ad0f1535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isChosen: 0
+  chosenColor: {r: 0.7610062, g: 0.29212138, b: 0.20341347, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
