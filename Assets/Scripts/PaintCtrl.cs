@@ -7,19 +7,37 @@ public class PaintCtrl : InstanceBase<PaintCtrl>
     public List<PaintInfo> paintLt=new List<PaintInfo>();
     public PaintInfo nowChoose;
 
-    
+    public Dictionary<string,Color> colorDt= new Dictionary<string, Color>();
     public GameObject itemPrefab,itemParent;
 
     public Material outlineMt; 
     List<PaintItem> paintItemLt=new List<PaintItem>();
     void Start()
     {
+        Init();
+    }
+    public void Init()
+    {
         foreach(var i in paintLt)
         {
+            colorDt[i.materialLt[0].name]=i.materialLt[0].color;
             PaintItem item=Instantiate(itemPrefab,itemParent.transform).GetComponent<PaintItem>();
             item.Set(i);
             paintItemLt.Add(item);
         }
+        
+    }
+    public Color? GetOriginColor(string name)
+    {
+        foreach(var i in colorDt.Keys)
+        {
+            if(name.Contains(i))
+            {
+                return colorDt[i];
+                
+            }
+        }
+        return null;
     }
     public void Reset()
     {

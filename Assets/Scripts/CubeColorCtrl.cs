@@ -9,12 +9,21 @@ public class CubeColorCtrl : InstanceBase<CubeColorCtrl>
     
     public Image bigColorDisplay;
     public Color nowChosenColor;
+    public bool onReset;
     void Start()
     {
         
     }
+    
+    public void SetOnReset()
+    {
+        onReset=true;
+        bigColorDisplay.color=new Color(0,0,0,0);
+        nowChosenColor=new Color(0,0,0,0);
+    }
     public void SetColor(Color color)
     {
+        onReset=false;
         nowChosenColor=color;
         bigColorDisplay.color=color;
     }

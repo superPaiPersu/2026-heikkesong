@@ -7,4 +7,5 @@ public class PaintInfo
 {
     public List<Material> materialLt;
     public Sprite image;
+    
 }
