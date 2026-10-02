@@ -3,7 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 public enum GameMode
 {
-    none,carve,paint,add
+    none=0,carve=1,paint=2,add=3
 }
 public class PlayerBehaviorCtrl : InstanceBase<PlayerBehaviorCtrl>
 {
@@ -76,9 +76,13 @@ public class PlayerBehaviorCtrl : InstanceBase<PlayerBehaviorCtrl>
             }
             else
             {
-                nowMode=GameMode.none;
+                ChangeGameMode(0);
             }
         }
+    }
+    public void ChangeGameMode(int num)
+    {
+        nowMode=(GameMode)num;
     }
     void UpdateCursor()
     {
