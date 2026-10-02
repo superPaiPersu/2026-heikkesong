@@ -81,6 +81,7 @@ public class PlayerBehaviorCtrl : InstanceBase<PlayerBehaviorCtrl>
         }
         
     }
+    
     public void ChangeGameMode(int num)
     {
         nowMode=(GameMode)num;

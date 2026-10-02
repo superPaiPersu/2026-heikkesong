@@ -18,6 +18,28 @@ public class CubeManager : InstanceBase<CubeManager>
         lengthY=collider.size.y*smallCubePrefab.transform.localScale.y;
         lengthZ=collider.size.z*smallCubePrefab.transform.localScale.z;
     }
+    public void DeleteCube(CubeItem item)
+    {
+        allCubes.Remove(item);
+    }
+    public void OutlineVisablity(bool flag)
+    {
+        
+        
+        foreach(var i in allCubes)
+        {
+            MeshRenderer mtr=i.GetComponent<MeshRenderer>();
+            Material mt=mtr.materials[mtr.materials.Length-1];
+            Color cr=mt.color;
+            if(flag)
+                cr.a=1;
+            else
+                cr.a=0;
+            mt.color=cr;
+            
+        }
+        
+    }
     public void InitCubes()//y是竖轴
     {
         

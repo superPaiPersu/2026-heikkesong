@@ -13,9 +13,9 @@ public class CubeItem : MonoBehaviour
     }
     public void Delete()
     {
-        
+        CubeManager.instance.DeleteCube(this);
         DestroyImmediate(gameObject);
-        ;
+        
     }
     public void ChangeMaterial()
     {
@@ -25,11 +25,12 @@ public class CubeItem : MonoBehaviour
             PaintCtrl.instance.outlineMt
         };
         mr.SetMaterials(mtlt);
+        CubeManager.instance.OutlineVisablity(OutlineButton.instance.isActive);
     }
     public void ChangeColor()
     {
         normalColor=CubeColorCtrl.instance.nowChosenColor;
-       
+
     }
     public void Create()
     {
