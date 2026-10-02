@@ -28,7 +28,8 @@ public class CubeItem : MonoBehaviour
     }
     public void ChangeColor()
     {
-        mr.material.color=CubeColorCtrl.instance.nowChosenColor;
+        normalColor=CubeColorCtrl.instance.nowChosenColor;
+       
     }
     public void Create()
     {

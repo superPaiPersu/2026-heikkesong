@@ -79,10 +79,12 @@ public class PlayerBehaviorCtrl : InstanceBase<PlayerBehaviorCtrl>
                 ChangeGameMode(0);
             }
         }
+        
     }
     public void ChangeGameMode(int num)
     {
         nowMode=(GameMode)num;
+        print(nowMode);
     }
     void UpdateCursor()
     {

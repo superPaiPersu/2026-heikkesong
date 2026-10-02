@@ -48,7 +48,7 @@ public class CameraCtrl : InstanceBase<CameraCtrl>
     }
     void GetMouseInput()
     {
-        if(Input.GetMouseButton(1))
+        if(Input.GetMouseButton(2))
         {
             float angle=Vector3.Angle(transform.position-center.position,Vector3.up),x=Input.GetAxisRaw("Mouse X"),y=Input.GetAxisRaw("Mouse Y");
 

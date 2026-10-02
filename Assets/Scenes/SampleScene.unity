@@ -239,7 +239,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 19035541}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1458036892}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &19185864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -462,7 +474,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 25803037}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1535208512}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &34235703
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,7 +760,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 101315761}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 663876891}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &123098566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,7 +1310,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 278129165}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1492797205}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &278634646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,7 +1531,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 280109966}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 278634648}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &290125492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,7 +1695,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 301522250}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 200177858}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &310284070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2057,7 +2129,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 382002417}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 838527615}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &405397904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2954,7 +3038,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 547166098}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 865475733}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &552940626
 GameObject:
   m_ObjectHideFlags: 0
@@ -3075,7 +3171,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 552940628}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 835923553}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &558921284
 GameObject:
   m_ObjectHideFlags: 0
@@ -3196,7 +3304,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 558921286}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 624547651}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &617049453
 GameObject:
   m_ObjectHideFlags: 0
@@ -3764,7 +3884,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 671128303}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1744372956}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &686841127
 GameObject:
   m_ObjectHideFlags: 0
@@ -4075,7 +4207,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 770761454}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1687539295}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &775402980
 GameObject:
   m_ObjectHideFlags: 0
@@ -4196,7 +4340,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 775402982}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2000205773}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &788827881
 GameObject:
   m_ObjectHideFlags: 0
@@ -4493,7 +4649,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 814333756}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 824591571}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &824591569
 GameObject:
   m_ObjectHideFlags: 0
@@ -5083,7 +5251,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 858366778}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061400720}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &858366778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5451,7 +5631,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 906497195}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 123364147}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &944832637
 GameObject:
   m_ObjectHideFlags: 0
@@ -5812,7 +6004,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1023326221}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 756380597}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1023326221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6388,7 +6592,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1146029024}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 944832639}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1146029024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6796,7 +7012,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1208635599}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1096071955}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1234685993
 GameObject:
   m_ObjectHideFlags: 0
@@ -7093,7 +7321,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1273711518}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1365782384}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1275384825
 GameObject:
   m_ObjectHideFlags: 0
@@ -7214,7 +7454,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1275384827}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1873487916}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1305218000
 GameObject:
   m_ObjectHideFlags: 0
@@ -7780,7 +8032,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1407060558}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1630609221}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1412045034
 GameObject:
   m_ObjectHideFlags: 0
@@ -8289,7 +8553,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1527495271}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1234685995}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1535208510
 GameObject:
   m_ObjectHideFlags: 0
@@ -8460,7 +8736,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1544676050}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1949104294}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1544676050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8694,7 +8982,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1628816494}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1406160414}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1630609219
 GameObject:
   m_ObjectHideFlags: 0
@@ -8903,7 +9203,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1638674611}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1735554730}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1664761085
 GameObject:
   m_ObjectHideFlags: 0
@@ -9024,7 +9336,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1664761087}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 800528755}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1687539293
 GameObject:
   m_ObjectHideFlags: 0
@@ -9233,7 +9557,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1688755615}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1801724234}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1697047044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9822,7 +10158,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1767752117}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1268612308}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1801724232
 GameObject:
   m_ObjectHideFlags: 0
@@ -9993,7 +10341,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1805606082}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 516814595}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1805606082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10152,7 +10512,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1862720004}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1758584564}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1873487914
 GameObject:
   m_ObjectHideFlags: 0
@@ -10678,7 +11050,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1980272623}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 983562692}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1994062968
 GameObject:
   m_ObjectHideFlags: 0
@@ -10799,7 +11183,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1994062970}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 843636338}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2000205771
 GameObject:
   m_ObjectHideFlags: 0
@@ -11107,7 +11503,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2085623391}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 788827883}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2085623391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11266,7 +11674,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2096420043}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1519795893}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2139585059
 GameObject:
   m_ObjectHideFlags: 0
@@ -11387,7 +11807,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2139585061}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 34235705}
+        m_TargetAssemblyTypeName: ColorUIItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
