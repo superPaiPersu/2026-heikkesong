@@ -18,7 +18,7 @@ public class CameraCtrl : InstanceBase<CameraCtrl>
     public List<GameObject> flagPointLt;
     void Start()
     {
-        
+        ;
     }
     IEnumerator CarmeraLerp()
     {
@@ -46,6 +46,11 @@ public class CameraCtrl : InstanceBase<CameraCtrl>
         }
 
     }
+    public void InitCameraRadius(float distance)
+    {
+        radius=distance;
+        transform.position=(transform.position-center.position).normalized*radius+center.position;
+    }
     void GetMouseInput()
     {
         if(Input.GetMouseButton(2))
@@ -66,12 +71,22 @@ public class CameraCtrl : InstanceBase<CameraCtrl>
             transform.LookAt(center);
         }
         // print(Input.GetAxis("Mouse ScrollWheel"));
-        transform.position+=-(transform.position-center.position).normalized*Input.GetAxis("Mouse ScrollWheel")*scaleSpeed*Time.deltaTime;
+        float wheelNum=Input.GetAxis("Mouse ScrollWheel");
+        if(wheelNum!=0)
+        {
+            transform.position+=-(transform.position-center.position).normalized*wheelNum*scaleSpeed*Time.deltaTime;
+            radius=(transform.position-center.position).magnitude;
+        }
         
     }
     // Update is called once per frame
     void Update()
     {
+        foreach(GameObject flagPoint in flagPointLt)
+        {
+            flagPoint.transform.position=(flagPoint.transform.position-center.position).normalized*radius+center.position;
+        }
+        
         if(Input.GetKeyDown(KeyCode.UpArrow))
         {
             Transform(flagPointLt[(int)Direction.up]);

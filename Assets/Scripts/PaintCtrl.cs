@@ -26,6 +26,7 @@ public class PaintCtrl : InstanceBase<PaintCtrl>
             paintItemLt.Add(item);
         }
         
+        paintItemLt[0].OnClick();
     }
     public Color? GetOriginColor(string name)
     {

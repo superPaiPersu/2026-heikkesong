@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -14,9 +15,9 @@ public class CubeManager : InstanceBase<CubeManager>
         Application.targetFrameRate=60;
         BoxCollider collider=smallCubePrefab.GetComponent<BoxCollider>();
         lengthX=collider.size.x*smallCubePrefab.transform.localScale.x;
-        
         lengthY=collider.size.y*smallCubePrefab.transform.localScale.y;
         lengthZ=collider.size.z*smallCubePrefab.transform.localScale.z;
+        CameraCtrl.instance.InitCameraRadius(math.max(math.max(lengthX*cubeCnt.x,lengthY*cubeCnt.y),lengthZ*cubeCnt.z)*2);
     }
     public void DeleteCube(CubeItem item)
     {
