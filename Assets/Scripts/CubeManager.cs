@@ -9,15 +9,27 @@ public class CubeManager : InstanceBase<CubeManager>
     public GameObject smallCubePrefab,cubesParent;
     public Vector3 centerPos,cubeCnt;
     List<CubeItem> allCubes=new List<CubeItem>();
+
+    public ValueConfigUI lengthNumxUI,lengthNumyUI,lengthNumzUI,lengthXUI,lengthYUI,lengthZUI;
     float lengthX,lengthY,lengthZ;
     void Start()
     {
         Application.targetFrameRate=60;
-        BoxCollider collider=smallCubePrefab.GetComponent<BoxCollider>();
-        lengthX=collider.size.x*smallCubePrefab.transform.localScale.x;
-        lengthY=collider.size.y*smallCubePrefab.transform.localScale.y;
-        lengthZ=collider.size.z*smallCubePrefab.transform.localScale.z;
+        // BoxCollider collider=smallCubePrefab.GetComponent<BoxCollider>();
+        // lengthX=collider.size.x*smallCubePrefab.transform.localScale.x;
+        // lengthY=collider.size.y*smallCubePrefab.transform.localScale.y;
+        // lengthZ=collider.size.z*smallCubePrefab.transform.localScale.z;
+    }    
+    public void Config()
+    {
+        cubeCnt.x=lengthNumxUI.num;
+        cubeCnt.y=lengthNumyUI.num;
+        cubeCnt.z=lengthNumzUI.num;
+        lengthX=lengthXUI.num;
+        lengthY=lengthYUI.num;
+        lengthZ=lengthZUI.num;
         CameraCtrl.instance.InitCameraRadius(math.max(math.max(lengthX*cubeCnt.x,lengthY*cubeCnt.y),lengthZ*cubeCnt.z)*2);
+        
     }
     public void DeleteCube(CubeItem item)
     {
@@ -55,6 +67,8 @@ public class CubeManager : InstanceBase<CubeManager>
                 for(int v=1;v<=cubeCnt.z;v++)
                 {
                     CubeItem item=Instantiate(smallCubePrefab,cubesParent.transform).GetComponent<CubeItem>();
+
+                    item.transform.localScale=new Vector3(lengthX,lengthY,lengthZ);
                     //小块的轴心位于中心，假设第一个块位于世界原点
                     item.transform.position=new Vector3(
                         centerPos.x-lengthX*cubeCnt.x/2+lengthX*0.5f,
@@ -74,6 +88,7 @@ public class CubeManager : InstanceBase<CubeManager>
     public void AddCube(Vector3 normal,CubeItem item)
     {
         CubeItem newItem=Instantiate(smallCubePrefab,cubesParent.transform).GetComponent<CubeItem>();
+        item.transform.localScale=new Vector3(lengthX,lengthY,lengthZ);
         allCubes.Add(newItem);
         if(Vector3.Cross(item.transform.forward,normal).sqrMagnitude<1e-6f)
         {
