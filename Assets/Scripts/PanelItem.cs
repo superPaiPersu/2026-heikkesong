@@ -8,6 +8,7 @@ public class PanelItem : MonoBehaviour
     void Start()
     {
         originPos=transform.position;
+        PanelCtrl.instance.RegisterPanel(this);
     }
     public void Close()
     {

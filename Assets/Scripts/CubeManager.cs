@@ -22,6 +22,7 @@ public class CubeManager : InstanceBase<CubeManager>
     }    
     public void Config()
     {
+        print(1);
         cubeCnt.x=lengthNumxUI.num;
         cubeCnt.y=lengthNumyUI.num;
         cubeCnt.z=lengthNumzUI.num;
@@ -29,7 +30,7 @@ public class CubeManager : InstanceBase<CubeManager>
         lengthY=lengthYUI.num;
         lengthZ=lengthZUI.num;
         CameraCtrl.instance.InitCameraRadius(math.max(math.max(lengthX*cubeCnt.x,lengthY*cubeCnt.y),lengthZ*cubeCnt.z)*2);
-        
+        InitCubes();
     }
     public void DeleteCube(CubeItem item)
     {
@@ -88,7 +89,7 @@ public class CubeManager : InstanceBase<CubeManager>
     public void AddCube(Vector3 normal,CubeItem item)
     {
         CubeItem newItem=Instantiate(smallCubePrefab,cubesParent.transform).GetComponent<CubeItem>();
-        item.transform.localScale=new Vector3(lengthX,lengthY,lengthZ);
+        newItem.transform.localScale=new Vector3(lengthX,lengthY,lengthZ);
         allCubes.Add(newItem);
         if(Vector3.Cross(item.transform.forward,normal).sqrMagnitude<1e-6f)
         {
@@ -106,9 +107,6 @@ public class CubeManager : InstanceBase<CubeManager>
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.C))
-        {
-            InitCubes();
-        }
+        
     }
 }

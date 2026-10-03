@@ -1,15 +1,18 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ValueConfigUI : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    InputField input;
+    TMP_InputField input;
     public int num;
     void Start()
     {
-        input=GetComponent<InputField>();
+        input=GetComponent<TMP_InputField>();
+        input.text="3";
+        num=3;
     }
     public void AddNum()
     {
