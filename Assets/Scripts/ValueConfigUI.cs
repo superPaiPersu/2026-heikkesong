@@ -1,13 +1,16 @@
 using System;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class ValueConfigUI : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     TMP_InputField input;
-    public int num;
+    public int num,maxx,minn;
+
     void Start()
     {
         input=GetComponent<TMP_InputField>();
@@ -17,15 +20,22 @@ public class ValueConfigUI : MonoBehaviour
     public void AddNum()
     {
         num+=1;
-        input.text=num.ToString();
+        CheckValueRange();
     }
     public void OnValueChange()
     {
         num=int.Parse(input.text);
+        CheckValueRange();
     }
     public void DeclineNum()
     {
         num-=1;
+        CheckValueRange();
+    }
+    void CheckValueRange()
+    {
+        num=math.min(maxx,num);
+        num=math.max(minn,num);
         input.text=num.ToString();
     }
     

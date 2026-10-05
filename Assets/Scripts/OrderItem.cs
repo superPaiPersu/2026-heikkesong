@@ -29,7 +29,7 @@ public class OrderItem : MonoBehaviour
         var textRect = orderDetail.rectTransform;
        
         LayoutRebuilder.ForceRebuildLayoutImmediate(textRect);
-        
+        OrderCtrl.instance.nowOrder=info;
         OrderCtrl.instance.ClearHighlight();
         ChangeHighlight(true);
     }
