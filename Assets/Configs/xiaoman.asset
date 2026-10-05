@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f772d8aaaf46d8947a9d64dc3b700dbf, type: 3}
+  m_Name: xiaoman
+  m_EditorClassIdentifier: 
+  orderName: "\u5FEB\u6765\u5E2E\u5FD9\uFF01"
+  orderDetail: "\u5582\uFF0C\u90A3\u4E2A\u8C01\uFF0C\u4F60\u7ED9\u6211\u96D5\u4E00\u4E2A\u6C34\u679C\u6302\u4EF6\uFF0C\u6211\u8981\u6302\u4E66\u5305\u4E0A\u3002"
+  AIPrompt: 
+  bossPratrait: {fileID: 0}
