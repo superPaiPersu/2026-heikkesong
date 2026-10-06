@@ -99,4 +99,9 @@ public class AICtrl : InstanceBase<AICtrl>
     {
         return OrderCtrl.instance.nowOrder.AIPrompt;
     }
+
+    public void BeginBargain()
+    {
+        BargainFlow.Ensure().SubmitWork();
+    }
 }
