@@ -5,10 +5,19 @@ using System.IO;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class AICtrl : InstanceBase<AICtrl>
 {
+    // 与 Assets/Resources/UI/委托人 中的文件后缀保持一致，文件夹是表情的唯一来源。
+    static readonly string[] MoodNames =
+    {
+        "default", "happy", "unsure", "sad", "shocked", "thinking", "angry"
+    };
+
     public GameObject cameraParent;
+    [SerializeField] Image moodImage;
+    [SerializeField] Sprite[] moodSprites;
     Texture2D[] imgs;
    
     public void Start()
@@ -98,6 +107,36 @@ public class AICtrl : InstanceBase<AICtrl>
     public string GetAIPrompt()
     {
         return OrderCtrl.instance.nowOrder.AIPrompt;
+    }
+
+    public void SetMood(int mood)
+    {
+        if (moodImage == null)
+            return;
+
+        int index = Mathf.Clamp(mood, 0, MoodNames.Length - 1);
+        string prefix = "";
+        if (OrderCtrl.instance != null && OrderCtrl.instance.nowOrder != null &&
+            OrderCtrl.instance.nowOrder.bossImg != null)
+        {
+            string spriteName = OrderCtrl.instance.nowOrder.bossImg.name;
+            int separator = spriteName.IndexOf('_');
+            prefix = separator > 0 ? spriteName.Substring(0, separator) : spriteName;
+        }
+
+        if (!string.IsNullOrEmpty(prefix))
+        {
+            Sprite folderSprite = Resources.Load<Sprite>("UI/\u59d4\u6258\u4eba/" + prefix + "_" + MoodNames[index]);
+            if (folderSprite != null)
+            {
+                moodImage.sprite = folderSprite;
+                return;
+            }
+        }
+
+        // 保留 Inspector 旧引用作为资源缺失时的后备方案。
+        if (moodSprites != null && index < moodSprites.Length && moodSprites[index] != null)
+            moodImage.sprite = moodSprites[index];
     }
 
     public void BeginBargain()

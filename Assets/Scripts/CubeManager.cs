@@ -22,7 +22,7 @@ public class CubeManager : InstanceBase<CubeManager>
     }    
     public void Config()
     {
-        print(1);
+        
         cubeCnt.x=lengthNumxUI.num;
         cubeCnt.y=lengthNumyUI.num;
         cubeCnt.z=lengthNumzUI.num;
@@ -53,6 +53,16 @@ public class CubeManager : InstanceBase<CubeManager>
             
         }
         
+    }
+    public void ClearCubes()
+    {
+        allCubes.Clear();
+        if (cubesParent == null)
+            return;
+        while (cubesParent.transform.childCount > 0)
+        {
+            DestroyImmediate(cubesParent.transform.GetChild(0).gameObject);
+        }
     }
     public void InitCubes()//y是竖轴
     {

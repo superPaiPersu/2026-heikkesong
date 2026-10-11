@@ -24,8 +24,12 @@ public class ValueConfigUI : MonoBehaviour
     }
     public void OnValueChange()
     {
-        num=int.Parse(input.text);
-        CheckValueRange();
+        if(int.TryParse(input.text,out num))
+        {
+            CheckValueRange();
+        }
+        
+        
     }
     public void DeclineNum()
     {

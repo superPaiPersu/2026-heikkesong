@@ -1,5 +1,5 @@
 {
-  "endpoint": "https://api.openai.com/v1/chat/completions",
-  "apiKey": "",
-  "model": "gpt-4o-mini"
+  "endpoint": "https://api.ai-pixel.online/v1/chat/completions",
+  "apiKey": "sk-wSyiUNiudntalhgyBG7a74bqu3bgG4lDQ578cX8MP2vXRRHw",
+  "model": "gpt-6.1-sol"
 }

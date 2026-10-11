@@ -18,7 +18,8 @@ public class SubmitCapture : MonoBehaviour
 
     void Start()
     {
-        Hide();
+        foreach (Camera cam in Collect())
+            cam.enabled = true;
     }
 
     public void Hide()
@@ -38,7 +39,6 @@ public class SubmitCapture : MonoBehaviour
             cam.enabled = true;
             yield return new WaitForEndOfFrame();
             pngs.Add(Read(cam.targetTexture));
-            cam.enabled = false;
         }
         onDone?.Invoke(pngs);
     }

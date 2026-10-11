@@ -19,6 +19,7 @@ public class ImpressionResult
 {
     public int basePrice;
     public string comment;
+    public int mood;
 }
 
 [System.Serializable]
@@ -27,6 +28,7 @@ public class TalkResult
     public string reply;
     public int talkScore;
     public bool accepted;
+    public int mood;
 }
 
 public class BargainApi
@@ -69,7 +71,7 @@ public class BargainApi
         }
         string prompt = "你是委托人，正在看一件刚做好的雕塑。下面按顺序是六个固定机位：" + string.Join("、", SubmitCapture.ViewNames) + "。"
             + "委托是「" + orderTitle + "」：" + brief
-            + "。请只根据画面给第一印象基础价，范围 20 到 80 的整数。只返回 JSON：{\"basePrice\":40,\"comment\":\"一句中文评价\"}";
+            + "。请只根据画面给第一印象基础价，范围 20 到 80 的整数，并给出当前心情 mood。mood 必须是 0 到 6 的整数：0 平静，1 开心，2 怀疑，3 难过，4 震惊，5 思考，6 愤怒。只返回 JSON：{\"basePrice\":40,\"comment\":\"一句中文评价\",\"mood\":0}";
         string body = "{"
             + "\"model\":\"" + Esc(Config.model) + "\","
             + "\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"" + Esc(prompt) + "\"},"
@@ -89,24 +91,37 @@ public class BargainApi
                 return;
             }
             result.basePrice = Mathf.Clamp(result.basePrice, 0, 100);
+            result.mood = Mathf.Clamp(result.mood, 0, 6);
             onDone?.Invoke(result, null);
         });
     }
 
-    public static IEnumerator RequestTalk(string orderTitle, string brief, int basePrice, int talkScore, List<string> roles, List<string> lines, string playerLine, Action<TalkResult, string> onDone)
+    public static IEnumerator RequestTalk(string orderTitle, string brief, int basePrice, int talkScore, List<string> roles, List<string> lines, string playerLine, List<byte[]> pngs, Action<TalkResult, string> onDone)
     {
         string system = "你是委托人，正在和雕塑匠人议价。委托「" + orderTitle + "」：" + brief
             + "。作品的第一印象基础价是 " + basePrice + "，当前谈话分是 " + talkScore + "。"
             + "总价=基础价+谈话分。谈话分是累计值，不是增量，范围 -20 到 30。"
-            + "根据玩家这句话调整谈话分：诚恳、讲清工时和难度可以加分，乱开价或态度差就减分。"
-            + "用中文说话，不要说自己是人工智能。只返回 JSON：{\"reply\":\"你的回复\",\"talkScore\":0,\"accepted\":false}";
+            + "根据玩家这句话调整谈话分：诚恳、讲清作品构思、工时和难度可以加分，胡言乱语、虚假描述或态度差就减分。"
+            + "accepted 表示你是否还愿意继续谈话：如果玩家的解释清楚且值得继续沟通，返回 true；如果玩家胡言乱语、态度恶劣或你决定不再继续谈判，返回 false。"
+            + "返回 false 时，当前总价就是最终报价，不代表已经成交。用中文说话，不要说自己是人工智能。"
+            + "Always return mood as an integer from 0 to 6: 0 default, 1 happy, 2 unsure, 3 sad, 4 shocked, 5 thinking, 6 angry. Return JSON: {\"reply\":\"reply\",\"talkScore\":0,\"accepted\":true,\"mood\":0}";
         StringBuilder messages = new StringBuilder();
         messages.Append("{\"role\":\"system\",\"content\":\"").Append(Esc(system)).Append("\"}");
         for (int i = 0; i < lines.Count; i++)
         {
             messages.Append(",{\"role\":\"").Append(roles[i]).Append("\",\"content\":\"").Append(Esc(lines[i])).Append("\"}");
         }
-        messages.Append(",{\"role\":\"user\",\"content\":\"").Append(Esc(playerLine)).Append("\"}");
+        messages.Append(",{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"")
+            .Append(Esc(playerLine)).Append("\"}");
+        for (int i = 0; i < pngs.Count; i++)
+        {
+            string name = i < SubmitCapture.ViewNames.Length ? SubmitCapture.ViewNames[i] : "视角" + (i + 1);
+            messages.Append(",{\"type\":\"image_url\",\"image_url\":{\"url\":\"data:image/png;base64,")
+                .Append(Convert.ToBase64String(pngs[i]))
+                .Append("\"}},{\"type\":\"text\",\"text\":\"")
+                .Append(Esc(name)).Append("\"}");
+        }
+        messages.Append("]}");
         string body = "{\"model\":\"" + Esc(Config.model) + "\",\"messages\":[" + messages + "]}";
         yield return Post(body, raw =>
         {
@@ -123,6 +138,7 @@ public class BargainApi
                 return;
             }
             result.talkScore = Mathf.Clamp(result.talkScore, -20, 30);
+            result.mood = Mathf.Clamp(result.mood, 0, 6);
             onDone?.Invoke(result, null);
         });
     }

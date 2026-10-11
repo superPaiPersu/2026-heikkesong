@@ -9,7 +9,7 @@ public class PlayerBehaviorCtrl : InstanceBase<PlayerBehaviorCtrl>
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameMode nowMode;
-    bool inCarve;
+    public bool inCarve,isLocked;
     List<CubeItem> deleteIntentCubeLt= new List<CubeItem>();
     public Texture2D cursorDefault,cursorCarve,cursorPaint,cursorAdd;
     void Start()
@@ -23,7 +23,7 @@ public class PlayerBehaviorCtrl : InstanceBase<PlayerBehaviorCtrl>
             Ray r=CameraCtrl.instance.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             
-            if (Physics.Raycast(r,out hit,100,1<<LayerMask.NameToLayer("cube")))
+            if (Physics.Raycast(r,out hit,1000,1<<LayerMask.NameToLayer("cube")))
             {
                 
                 CubeItem item=hit.transform.GetComponent<CubeItem>();
@@ -106,10 +106,24 @@ public class PlayerBehaviorCtrl : InstanceBase<PlayerBehaviorCtrl>
             Cursor.SetCursor(cursorDefault,Vector2.zero,CursorMode.Auto);
         }
     }
+    public void LockBehavior()
+    {
+        isLocked=true;
+        nowMode=GameMode.none;
+        inCarve=false;
+    }
+    public void UnLockBehavior()
+    {
+        isLocked=false;
+    }
     // Update is called once per frame
     void Update()
     {
-        GetInput();
+        if(!isLocked)
+        {
+            GetInput();
+        }
+        
         UpdateCursor();
     }
 }

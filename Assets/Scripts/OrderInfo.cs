@@ -6,6 +6,6 @@ public class OrderInfo : ScriptableObject
     public string orderName;
     public string orderDetail;
     public string AIPrompt;
-
-    public Sprite bossPratrait;
+    
+    public Sprite bossPratrait,bossImg;
 }

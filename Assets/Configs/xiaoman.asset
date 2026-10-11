@@ -15,4 +15,5 @@ MonoBehaviour:
   orderName: "\u5FEB\u6765\u5E2E\u5FD9\uFF01"
   orderDetail: "\u5582\uFF0C\u90A3\u4E2A\u8C01\uFF0C\u4F60\u7ED9\u6211\u96D5\u4E00\u4E2A\u6C34\u679C\u6302\u4EF6\uFF0C\u6211\u8981\u6302\u4E66\u5305\u4E0A\u3002"
   AIPrompt: 
-  bossPratrait: {fileID: 0}
+  bossPratrait: {fileID: 21300000, guid: f0a90f6adf4ab084ab334bb09f62e4d1, type: 3}
+  bossImg: {fileID: 21300000, guid: 3f8f1c23e58ac054b877412e10169428, type: 3}

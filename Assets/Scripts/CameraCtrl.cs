@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 public enum Direction
 {
     up=0,left=1,right=2,front=3,back=4
@@ -72,13 +73,14 @@ public class CameraCtrl : InstanceBase<CameraCtrl>
         }
         // print(Input.GetAxis("Mouse ScrollWheel"));
         float wheelNum=Input.GetAxis("Mouse ScrollWheel");
-        if(wheelNum!=0)
+        if(wheelNum!=0 )
         {
             transform.position+=-(transform.position-center.position).normalized*wheelNum*scaleSpeed*Time.deltaTime;
             radius=(transform.position-center.position).magnitude;
         }
         
     }
+    
     // Update is called once per frame
     void Update()
     {
@@ -86,23 +88,26 @@ public class CameraCtrl : InstanceBase<CameraCtrl>
         {
             flagPoint.transform.position=(flagPoint.transform.position-center.position).normalized*radius+center.position;
         }
+        if(!PlayerBehaviorCtrl.instance.isLocked)
+        {
+            if(Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                Transform(flagPointLt[(int)Direction.up]);
+            }
+            if(Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                Transform(flagPointLt[(int)Direction.left]);
+            }
+            if(Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                Transform(flagPointLt[(int)Direction.right]);
+            }
+            if(Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                Transform(flagPointLt[(int)Direction.back]);
+            }
+        }
         
-        if(Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Transform(flagPointLt[(int)Direction.up]);
-        }
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            Transform(flagPointLt[(int)Direction.left]);
-        }
-        if(Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Transform(flagPointLt[(int)Direction.right]);
-        }
-        if(Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            Transform(flagPointLt[(int)Direction.back]);
-        }
         GetMouseInput();
     }
 }

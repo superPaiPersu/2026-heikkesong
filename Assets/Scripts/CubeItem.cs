@@ -20,7 +20,7 @@ public class CubeItem : MonoBehaviour
     public void ChangeMaterial()
     {
         
-        print(PaintCtrl.instance.nowChoose);
+       
         List<Material> mtlt= new List<Material>(PaintCtrl.instance.nowChoose.materialLt)
         {
             PaintCtrl.instance.outlineMt
